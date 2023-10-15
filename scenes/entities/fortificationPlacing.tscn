@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://4as4e6h04w0g"]
+
+[ext_resource type="Script" path="res://assets/scripts/fortificationPlacing.gd" id="1_qc85a"]
+[ext_resource type="PackedScene" uid="uid://brtvjf4h5v6uj" path="res://scenes/entities/wall.tscn" id="2_yrwi3"]
+
+[node name="fortificationPlacing" type="Node2D"]
+script = ExtResource("1_qc85a")
+wall = ExtResource("2_yrwi3")

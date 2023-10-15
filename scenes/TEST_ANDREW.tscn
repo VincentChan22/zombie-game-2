@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciivs0jhagwdb"]
+
+[ext_resource type="PackedScene" uid="uid://bc4onuf14ugmu" path="res://scenes/map.tscn" id="1_m12lh"]
+[ext_resource type="PackedScene" uid="uid://brtvjf4h5v6uj" path="res://scenes/entities/wall.tscn" id="2_o7fqi"]
+[ext_resource type="PackedScene" uid="uid://c0kl1ipakwc4x" path="res://scenes/entities/corpse.tscn" id="3_7jdef"]
+
+[node name="TEST" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_m12lh")]
+
+[node name="wall" parent="." instance=ExtResource("2_o7fqi")]
+position = Vector2(115, 24)
+
+[node name="Corpse" parent="." instance=ExtResource("3_7jdef")]
+position = Vector2(-1290, 3)

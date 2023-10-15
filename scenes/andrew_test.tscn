@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmakv1yyruidy"]
+
+[ext_resource type="PackedScene" uid="uid://eu6gvil3xmm6" path="res://scenes/zombie.tscn" id="1_ojfl4"]
+[ext_resource type="PackedScene" uid="uid://d042fo3u6q2js" path="res://scenes/entities/vincent.tscn" id="2_711ri"]
+[ext_resource type="PackedScene" uid="uid://bio8rt64h23vy" path="res://scenes/wall.tscn" id="3_0vduj"]
+
+[node name="andrew_test" type="Node2D"]
+
+[node name="Zombie" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_ojfl4")]
+position = Vector2(181, 47)
+player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("2_711ri")]
+position = Vector2(172, -1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Area2D" parent="." instance=ExtResource("3_0vduj")]
+position = Vector2(-11, -133)

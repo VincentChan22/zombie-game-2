@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0kl1ipakwc4x"]
+
+[ext_resource type="Script" path="res://assets/scripts/corpse.gd" id="1_v2miq"]
+[ext_resource type="Texture2D" uid="uid://cvjgi8vo8oycc" path="res://assets/images/player.png" id="2_7ymei"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h5ayu"]
+radius = 9.05539
+
+[node name="Corpse" type="Area2D" groups=["corpse"]]
+script = ExtResource("1_v2miq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h5ayu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.933333, 0, 0.294118, 1)
+texture = ExtResource("2_7ymei")

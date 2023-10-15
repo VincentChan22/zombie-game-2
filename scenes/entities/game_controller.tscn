@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnco6vj3cqcgm"]
+
+[ext_resource type="Script" path="res://assets/scripts/game_controller.gd" id="1_y256c"]
+[ext_resource type="PackedScene" uid="uid://eu6gvil3xmm6" path="res://scenes/zombie.tscn" id="2_8koqi"]
+
+[node name="game_controller" type="Node2D"]
+script = ExtResource("1_y256c")
+zombie = ExtResource("2_8koqi")
+spawn_radius = 200.0
+
+[node name="zombie_timer" type="Timer" parent="."]
+
+[node name="prep_phase_timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="zombie_timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="prep_phase_timer" to="." method="_on_prep_phase_timer_timeout"]

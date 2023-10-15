@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://brtvjf4h5v6uj"]
+
+[ext_resource type="Script" path="res://assets/scripts/wall.gd" id="1_ie8w3"]
+[ext_resource type="Texture2D" uid="uid://bh0gaayb7v3lg" path="res://assets/TileMap/NinjaAdventure/Backgrounds/Vehicles/Boat.png" id="2_uy82f"]
+[ext_resource type="Script" path="res://assets/scripts/health_comp.gd" id="3_n7jna"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0vhb"]
+
+[node name="wall" type="StaticBody2D" node_paths=PackedStringArray("sprite", "coll2D", "health_comp") groups=["wall"]]
+collision_layer = 2
+script = ExtResource("1_ie8w3")
+sprite = NodePath("Sprite2D")
+coll2D = NodePath("CollisionShape2D")
+health_comp = NodePath("HealthComp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_n0vhb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_uy82f")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_n0vhb")
+
+[node name="HealthComp" type="Node" parent="."]
+script = ExtResource("3_n7jna")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://detewkeb6sucw"]
+
+[ext_resource type="Texture2D" uid="uid://30ge8qkm75mx" path="res://assets/images/laserRed01.png" id="1_305ie"]
+[ext_resource type="Script" path="res://assets/scripts/bullet.gd" id="1_ldu1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pme75"]
+size = Vector2(9, 15)
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_ldu1d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 9.53674e-07)
+rotation = 1.5708
+scale = Vector2(0.845, 0.25)
+texture = ExtResource("1_305ie")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.2)
+shape = SubResource("RectangleShape2D_pme75")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

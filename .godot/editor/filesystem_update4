@@ -1,0 +1,15 @@
+res://scenes/entities/vincent.tscn
+res://assets/map.tres
+res://assets/scripts/zombie.gd
+res://scenes/entities/bullet.tscn
+res://scenes/entities/gun.tscn
+res://scenes/TEST.tscn
+res://scenes/map.tscn
+res://scenes/entities/wall.tscn
+res://scenes/entities/fortificationPlacing.tscn
+res://scenes/entities/game_controller.tscn
+res://scenes/zombie.tscn
+res://assets/text_themes/minecraft.tres
+res://assets/scripts/game_controller.gd
+res://assets/scripts/bullet.gd
+res://assets/scripts/wall.gd
