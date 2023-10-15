@@ -5,6 +5,8 @@ class_name GameController
 @export var zombie : PackedScene
 @export var center_pos: Vector2
 @export var spawn_radius: float
+@export var player: Node2D 
+
 @onready var zombie_timer := $zombie_timer as Timer
 @onready var prep_phase_timer := $prep_phase_timer as Timer
 
@@ -13,15 +15,20 @@ var waveNumber: int = 0
 var numZombiesToSpawn :int = 0
 
 func _ready():
+	player = get_tree().root.get_child(0).find_child("Player")
+	print(player)
 	startPrepPhase()
+
 func startAttackPhase():
 	print("attack!")
 	waveNumber += 1
 	numZombiesToSpawn = waveNumber
 	zombie_timer.start()
 func startPrepPhase():
-	print("prep")
+	print(player.get_node("fortification_placing"))
+	player.get_node("fortification_placing").num_fortification += waveNumber
 	prep_phase_timer.start()
+	
 
 func zombieDied():
 	var zombie_size := get_tree().get_nodes_in_group("zombie").size()
