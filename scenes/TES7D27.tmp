@@ -8,6 +8,7 @@
 [node name="TEST" type="Node2D"]
 
 [node name="game_controller" parent="." instance=ExtResource("1_ncvcx")]
+center_pos = null
 
 [node name="TileMap" parent="." instance=ExtResource("2_fkc0e")]
 
@@ -17,4 +18,4 @@
 position = Vector2(6, 14)
 zoom = Vector2(3, 3)
 script = ExtResource("4_nsee0")
-player = NodePath("../Player")
+player = NodePath("")

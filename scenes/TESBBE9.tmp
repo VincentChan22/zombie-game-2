@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c553alx3sn6uq"]
+
+[ext_resource type="PackedScene" uid="uid://cnco6vj3cqcgm" path="res://scenes/entities/game_controller.tscn" id="1_ncvcx"]
+[ext_resource type="PackedScene" uid="uid://brtvjf4h5v6uj" path="res://scenes/entities/wall.tscn" id="2_2u5e2"]
+[ext_resource type="PackedScene" uid="uid://bc4onuf14ugmu" path="res://scenes/map.tscn" id="2_fkc0e"]
+
+[node name="TEST" type="Node2D"]
+
+[node name="game_controller" parent="." instance=ExtResource("1_ncvcx")]
+
+[node name="TileMap" parent="." instance=ExtResource("2_fkc0e")]
+
+[node name="wall" parent="." instance=ExtResource("2_2u5e2")]
+position = Vector2(113, 21)
