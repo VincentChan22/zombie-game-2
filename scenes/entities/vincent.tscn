@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://d042fo3u6q2js"]
+[gd_scene load_steps=10 format=3 uid="uid://d042fo3u6q2js"]
 
 [ext_resource type="Script" path="res://assets/scripts/player.gd" id="1_bxotv"]
 [ext_resource type="Texture2D" uid="uid://cvjgi8vo8oycc" path="res://assets/images/player.png" id="2_s8xjh"]
 [ext_resource type="PackedScene" uid="uid://cicxd7mijd8kl" path="res://scenes/entities/gun.tscn" id="3_75qve"]
 [ext_resource type="Script" path="res://assets/scripts/health_comp.gd" id="4_o2kvo"]
+[ext_resource type="AudioStream" uid="uid://tp675qu47lgf" path="res://assets/TileMap/NinjaAdventure/Sounds/Game/Hit.wav" id="4_puplp"]
 [ext_resource type="Script" path="res://assets/scripts/fortificationPlacing.gd" id="5_b7mdj"]
 [ext_resource type="PackedScene" uid="uid://brtvjf4h5v6uj" path="res://scenes/entities/wall.tscn" id="6_ldecn"]
 
@@ -27,6 +28,9 @@ texture = ExtResource("2_s8xjh")
 
 [node name="gun" parent="." instance=ExtResource("3_75qve")]
 position = Vector2(15, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="gun"]
+stream = ExtResource("4_puplp")
 
 [node name="HealthComp" type="Node" parent="."]
 script = ExtResource("4_o2kvo")
